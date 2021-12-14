@@ -1,0 +1,178 @@
+/*============== IMPORTS ==============*/
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+/*============== VARIABLES ==============*/
+:root {
+  /*=== COLORS VARIABLES ===*/
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  /*=== FONTS VARIABLES ===*/
+  --main-font-size: 13px;
+  --big-font-size: 16px;
+  --main-font-family: "Manrope", sans-serif;
+  --main-font-weight: 500;
+  --bold-font-weight: 700;
+  font-size: var(--main-font-size);
+  font-family: var(--main-font-family);
+  font-weight: var(--main-font-weight);
+}
+
+/*============== GENERAL AND MOBILE STYLES ==============*/
+html,
+body {
+  margin: 0em;
+  padding: 0em;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--light-grayish-blue);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-areas:
+    "main"
+    "footer";
+  grid-template-rows: 90% 10%;
+  justify-content: center;
+}
+/*=== MAIN CARD ===*/
+.main-card {
+  grid-area: main;
+  display:  grid;
+  grid-template-areas: "image" "content";
+  grid-template-columns: 1fr;
+  grid-template-rows: 15em;
+  background-color: #fff;
+  width: 25em;
+  height: 40em;
+  justify-self: center;
+  align-self: center;
+  border-radius: .5em;
+
+}
+/*===  CARD IMAGE BACKGROUND  ===*/
+.main-card__image-background {
+  grid-area: image;
+  width: 100%;
+  height: 15em;
+  object-fit:  cover;
+  border-radius: 6.4px 6.4px 0em 0em;
+}
+/*=== CARD CONTENT ===*/
+.main-card__section {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left:  2.5em;
+}
+.main-card__title {
+  color: var(--very-dark-grayish-blue);
+  width: 90%;
+  font-weight: var(--bold-font-weight);
+  font-size: var(--big-font-size);
+  margin-bottom: 5px;
+}
+.main-card__info {
+  color: var(--desaturated-dark-blue);
+  width: 88%;
+  font-weight: var(--main-font-weight);
+  font-size: var(--main-font-size);
+
+}
+/*=== ARTICLE SHARE AND PROFILE ===*/
+.main-card__article {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding-top: 1em;
+  margin-bottom: -.8em;
+}
+/*=== PROFILE ===*/
+.article__profile-photo {
+  width: 3.5em;
+  border-radius: 26px;
+  object-fit: cover;
+}
+.profile-photo__infos {
+  display: flex;
+  width: 12.5em;
+  padding-left: 1em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: .3em;
+}
+.profile-photo__name {
+  margin-bottom: 0em;
+  color: var(--very-dark-grayish-blue);
+  font-weight: var(--bold-font-weight);
+  font-size: var(--main-font-size);
+}
+.profile-photo__date {
+  margin-top: 0em;
+  color: var(--desaturated-dark-blue);
+}
+/*=== SHARE BUTTON ===*/
+.share-button {
+  background-color: var(--light-grayish-blue);
+  padding: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 26px;
+}
+/*=== FOOTER ===*/
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding:  0em 1em 0em 1em;
+}
+
+/*============== DESKTOP STYLES ==============*/
+@media screen and (min-width: 768px){
+  :root {
+    --main-font-size: calc(13px + 3px);
+    --big-font-size: calc(16px + 3px);
+  }
+  /*===  MAIN CARD  ===*/
+  .main-card {
+    grid-auto-flow: column;
+    grid-template-areas: "image infos";
+    grid-template-columns:  20em 1fr;
+    grid-template-rows: 20em 10em;
+    width: 46em;
+    height: 20em;
+  }
+  /*===  CARD IMAGE BACKGROUND  ===*/
+  .main-card__image-background {
+    grid-area: image;
+    border-radius: .5em 0em 0em .5em;
+    height: 100%;
+    width: 100%;
+  }
+  /*===  CARD CONTENT  ===*/
+  .main-card__section {
+    grid-area: infos;
+    padding-top: 1em;
+    padding-bottom: .5em;
+  }
+  /*=== ARTICLE SHARE AND PROFILE ===*/
+  .main-card__article {
+    margin-top: -1.5em;
+  }
+  /*=== PROFILE ===*/
+
+  /*=== SHARE BUTTON ===*/
+  .share-button {
+    padding: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 26px;
+  }
+}
