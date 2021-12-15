@@ -46,7 +46,7 @@ body{
   grid-template-rows: 15em;
   background-color: #fff;
   width: 25em;
-  height: 40em;
+  height: 36em;
   justify-self: center;
   align-self: center;
   border-radius: .5em;
@@ -87,9 +87,14 @@ body{
 .main-card__article {
   display: flex;
   align-items: center;
-  align-content: center;
-  padding-top: 1em;
-  margin-bottom: -.8em;
+  position: relative;
+  width: 100%;
+  margin-left: -11%;
+  padding-left: 11%;
+  padding-bottom: .2em;
+  border-radius: 0em 0em 6.4px 6.4px;
+  background-color: #fff;
+  transition: 300ms ease-in-out;
 }
 /*=== PROFILE ===*/
 .article__profile-photo {
@@ -104,7 +109,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: .3em;
+
 }
 .profile-photo__name {
   margin-bottom: 0em;
@@ -123,6 +128,38 @@ body{
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 26px;
+  align-self: flex-end;
+  margin-top: -4em;
+  margin-right: 3em;
+  position: relative;
+  transition: 300ms ease-in-out;
+}
+/*=== SHARE ACTIVE ARTICLE===*/
+.share-infos {
+  display: none;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin-left: -11%;
+  padding-left: 11%;
+  padding-top: .8em;
+  padding-bottom: .8em;
+  border-radius: 0em 0em 6.4px 6.4px;
+  background-color: var(--very-dark-grayish-blue);
+  transition: 300ms ease-in-out;
+}
+.share-infos__title {
+  color: var(--grayish-blue);
+  font-weight: var(--main-font-weight);
+  margin-right: .8em;
+}
+.share-infos__infos {
+  display: flex;
+  width: 12.5em;
+  padding-left: 1em;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.2em;
 }
 /*=== FOOTER ===*/
 .footer {
