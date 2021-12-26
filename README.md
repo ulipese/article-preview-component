@@ -21,10 +21,10 @@
 ### Screenshot
 
 #### Mobile
-![](design/my-result-mobile.png)
+![](assets/design/my-result-mobile.png)
 
 #### Desktop
-![](design/my-result-desktop.png)
+![](assets/design/my-result-desktop.png)
 
 ### Demo
 
