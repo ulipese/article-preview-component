@@ -8,13 +8,13 @@ shareButton.addEventListener('click', () => {
   if (shareButton.classList.contains('active')) {
     shareButton.style.backgroundColor = '#6E8098';
     imgShareButton.src = './assets/images/icon-share-active.svg';
-    articleProfile.style.display = 'none';
+    articleProfile.classList.add('hidden');
     articleShare.style.display = 'flex';
   }
   else {
     imgShareButton.src = './assets/images/icon-share.svg';
     shareButton.style.backgroundColor = 'var(--light-grayish-blue)';
-    articleProfile.style.display = 'flex';
+    articleProfile.classList.remove('hidden');
     articleShare.style.display = 'none';
   }
 });

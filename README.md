@@ -20,7 +20,11 @@
 
 ### Screenshot
 
-![](design/my-result.png)
+#### Mobile
+![](design/my-result-mobile.png)
+
+#### Desktop
+![](design/my-result-desktop.png)
 
 ### Demo
 
@@ -41,7 +45,7 @@
 
 ### What I learned
 
-I learn to use the basic of Grid.
+I learn to use the basic of Grid and a bit of mobile first.
 
 ### Useful resources
 
